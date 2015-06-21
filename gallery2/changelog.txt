@@ -1,0 +1,60 @@
+GalleryJack Rebooted
+
+Version 1.6
+
+23-Sep-2013
+
+// Updated to jQuery 1.10.2
+
+
+****************************************************************
+
+Version 1.5
+
+4-Aug-2013
+
+// Updated to jQuery 1.10.1
+// Fixed z-index issue with local video player + fixed-sized mode
+
+
+****************************************************************
+
+Version 1.4
+
+12-Apr-2013
+
+// Updated to jQuery 1.9.1
+
+
+****************************************************************
+
+Version 1.3
+
+12-Jan-2013
+
+// Updated to jQuery 1.8.3
+
+
+****************************************************************
+
+Version 1.2
+
+15-Mar-2012
+
+// Corrected z-index bug for fixed-size version
+
+
+****************************************************************
+
+
+GalleryJack Rebooted
+
+Version 1.1
+
+12-Dec-2011
+
+// Updated to jQuery 1.7.1
+
+// Fixed IE8 Memory Leak
+
+// Fixed bug when no thumbnails are used

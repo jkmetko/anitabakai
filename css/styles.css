@@ -1022,6 +1022,7 @@ table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     z-index: 90;
+    background: rgba(0,0,0,0.5);
 }
 
 
@@ -1313,15 +1314,15 @@ nav.sidebar-navigation-menu {
     padding: 32px 0;
     z-index: 100;
     visibility: hidden;
+    overflow: auto;
     width: 280px;
-    overflow: hidden;
     height: 100%;
     background: none repeat scroll 0 0 rgba(39, 38, 43, 0.8);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 #menu-wrapper {
-    overflow: scroll;
+    overflow: hidden;
 }
 .st-menu::after {
     position: absolute;
@@ -1447,6 +1448,7 @@ body .cd-primary-nav-trigger, body .sound {
     top: 25px;
     width: 40px;
     z-index: 9999999;
+    background: rgba(0,0,0,0.5);
 }
 body .cd-primary-nav-trigger.is-clicked,
 body .cd-primary-nav-trigger:hover, body .sound:hover, .modify .top:hover {
@@ -1967,7 +1969,7 @@ header .overlay {
     bottom: 0;
     height: 50%;
     text-align: left;
-	display: none;
+	display: block; /*DISPLAY FIGCAPTION*/
 }
 .index-home figure.single-item-effect h2,
 .index-home figure.single-item-effect p,
@@ -2127,10 +2129,12 @@ header .overlay {
 }
 .index-category .grid figure p,
 .index-home .grid figure p {
+    text-align: right;
     padding-left: 10px !important;
 }
 .index-category figure.single-item-effect h2,
 .index-home figure.single-item-effect h2 {
+    text-align: right;
     padding-left: 10px !important;
 }
 .index-category figure.single-item-effect:hover h2, 
@@ -4434,3 +4438,64 @@ body.st-effect-3.menu-open .st-menu.st-effect-1 {
     /* Add new rules for this interval below */
 
 }
+
+
+
+
+/*---------------------------------------------*/
+/*--- 11. PARALLAX ---*/
+/*---------------------------------------------*/
+
+.parallax{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.parallax.anita-bridge{
+    background-image: url('../img/bg-2.jpg');
+}
+
+.parallax.anita-pav{
+    background-image: url('../img/anitabakai-pav.jpg');
+}
+
+
+
+/*---------------------------------------------*/
+/*--- 12. THUMBS ---*/
+/*---------------------------------------------*/
+
+.thumb{
+    background: rgba(255,255,255,0);
+
+    display: inline-block;
+    vertical-align: text-top;
+    padding: 5px;
+    text-align: center;
+
+    cursor: pointer;
+
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.thumb:hover{
+    background: rgba(255,255,255,1);
+    border-radius: 5px;
+
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.4);
+    -ms-transform: scale(1.05,1.05); /* IE 9 */
+    -webkit-transform: scale(1.05,1.05); /* Chrome, Safari, Opera */
+    transform: scale(1.05,1.05);
+    z-index: 2;
+}
+
+.thumb img{
+    border-radius: 5px;
+    text-align: center;
+}
+

@@ -221,15 +221,75 @@ function mobilecheck() {
 	}
 
 	window.UISearch = UISearch;
-
-	//NICE SCROLL
-	jQuery( document ).ready(function() {
-		$("#menu-wrapper").css("background-color": "red");
-		$("#menu-wrapper").click(function(){
-			alert("caf");
-		});
-		jQuery("#menu-wrapper").niceScroll();
-	});
 } )( window );
+
+function resizeImages(){
+    //FIGURE IMAGE
+    var figure = $("figure");
+
+    //console.log(jQuery('.figure .img'));
+    figure.each(function( index ) {
+        figure = $(this);
+        figureW = figure.width();
+        figureH = figure.height();
+
+        img = $('img', figure);
+        imgW = img.width();
+        imgH = img.height();
+
+        img.css({
+            top: '50%',
+            left: '50%',
+            'min-width': (figureW+80)+'px',
+            margin: '-'+imgH/2+'px 0 0 -'+((imgW/2))+'px'
+        });
+
+        /*if(imgW < figureW){
+         img.css({
+         width: '100%',
+         height: 'auto'
+         });
+         }else if(imgH < figureH){
+         img.css({
+         width: 'auto',
+         height: '100%'
+         });
+         }
+        console.log('('+figureW+', '+imgW+')' + '('+figureH+', '+imgH+')');*/
+    });
+
+    var wW = $( window ).width();
+    var wH = $( window ).height();
+
+    $("#slider1_container").css({
+        width: wW+'px',
+        height: wH+'px',
+        border: '10px solid red'
+    });
+}
+
+$( document ).ready(function() {
+    resizeImages();
+});
+
+(function($){
+    $(window).load(function(){
+       $(".st-menu").niceScroll();
+    });
+})(jQuery);
+
+$(document).ready(
+
+    function() {
+
+        $(".st-menu").niceScroll();
+
+    }
+
+);
+
+$( window ).resize(function() {
+    //resizeImages();
+});
 
 
